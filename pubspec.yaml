@@ -1,0 +1,396 @@
+name: iso_net
+description: A new Flutter project for IsoNet
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.2.8+29
+
+# The following defines the current flutter sdk for the project.
+# Add or update the SDK version here
+# Current Flutter SDK - 3.0.5
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  get: ^4.6.5
+  flutter_screenutil: ^5.5.4
+  tuple: ^2.0.0
+  intl: ^0.17.0
+  geolocator: ^9.0.2
+  permission_handler: ^10.0.1
+  image_picker: ^0.8.6
+  path_provider: ^2.0.11
+  shared_preferences: ^2.0.15
+  dio: ^4.0.6
+  connectivity_plus: ^2.3.5
+  image_cropper: ^3.0.0
+  device_info_plus: ^8.0.0
+  firebase_messaging: ^14.0.4
+  awesome_notifications: ^0.6.21
+  firebase_core: ^2.1.1
+  flutter_inapp_purchase: ^5.3.1
+  cached_network_image: ^3.2.1
+  flutter_staggered_grid_view: ^0.6.2
+  video_thumbnail: ^0.5.3
+  video_player: ^2.4.7
+  chewie: ^1.3.5
+  smooth_page_indicator: ^1.0.0+2
+  google_places_picker:
+  geocoding: ^2.0.5
+  url_launcher: ^6.1.7
+  photo_view: ^0.14.0
+  flutter_slidable: ^2.0.0
+  #image_downloader: ^0.31.0
+  flutter_exif_rotation: ^0.5.1
+  marquee: ^2.2.3
+  #  socket_io_client: ^2.0.0
+  gallery_saver: ^2.3.2
+  #  obs_websocket: ^5.0.0+14
+  web_socket_channel: ^2.2.0
+  share_plus: ^6.3.0
+  flutter_html: ^3.0.0-alpha.6
+  file_picker: ^5.2.4
+  rxdart: ^0.27.7
+  keep_keyboard_popup_menu: ^2.0.5
+  flutter_native_image: ^0.0.6+1
+  typed_data:
+  video_compress:
+    path: ./video_compress-3.1.2
+  persistent_bottom_nav_bar_v2: ^4.2.5
+  flutter_app_badger: ^1.5.0
+  transparent_image:
+  flutter_tags_x: ^1.1.0
+  socket_io_client: ^1.0.2
+  after_layout: ^1.2.0
+  characters: ^1.2.0
+  showcaseview: ^2.0.3
+  animate_do: ^3.0.2
+  http: ^0.13.5
+
+
+
+
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+  mockito:
+  build_runner: ^2.3.0
+  http_mock_adapter: ^0.3.3
+
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/3_dots_fill.png
+    - assets/images/3dots.png
+    - assets/images/3dots_icon_button.png
+    - assets/images/Arrow.png
+    - assets/images/black_down_arrow.png
+    - assets/images/black_fill_up_arrow.png
+    - assets/images/black_logo.png
+    - assets/images/black_share.png
+    - assets/images/call_grey.png
+    - assets/images/call.png
+    - assets/images/camera.png
+    - assets/images/cancel_fill_black.png
+    - assets/images/cancel_fill.png
+    - assets/images/cancel_red.png
+    - assets/images/clock_outline.png
+    - assets/images/comment_fill_grey.png
+    - assets/images/comment_outline.png
+    - assets/images/comment_white.png
+    - assets/images/comment.png
+    - assets/images/company_image_upload.png
+    - assets/images/create.png
+    - assets/images/dollor_fill.png
+    - assets/images/dollor.png
+    - assets/images/done_fill.png
+    - assets/images/down_arrow_fill_white.png
+    - assets/images/down_arrow_fill.png
+    - assets/images/down_arrow.png
+    - assets/images/download.png
+    - assets/images/edit_fill.png
+    - assets/images/Eye_Hidden.png
+    - assets/images/filter_fill.png
+    - assets/images/forum_fill.png
+    - assets/images/Forum.png
+    - assets/images/Glyph_ConfirmwithSideButton.png
+    - assets/images/green_accept.png
+    - assets/images/head_background.png
+    - assets/images/heart_like.png
+    - assets/images/heart_red.png
+    - assets/images/home_fill.png
+    - assets/images/left_arrow.png
+    - assets/images/location_services.png
+    - assets/images/location.png
+    - assets/images/Mask_Group_2.png
+    - assets/images/messenger_outline.png
+    - assets/images/messenger.png
+    - assets/images/navigate.png
+    - assets/images/network_fill.png
+    - assets/images/network_outline.png
+    - assets/images/notification.png
+    - assets/images/np_arrow_.png
+    - assets/images/photo.png
+    - assets/images/plus_fill.png
+    - assets/images/plus_white_small.png
+    - assets/images/plus.png
+    - assets/images/profile__image_upload.png
+    - assets/images/radio_button.png
+    - assets/images/red_delete.png
+    - assets/images/red_dot.png
+    - assets/images/refer_friend.png
+    - assets/images/reply.png
+    - assets/images/right_arrow.png
+    - assets/images/save_post.png
+    - assets/images/search_fill.png
+    - assets/images/search_yellow.png
+    - assets/images/search.png
+    - assets/images/send_outline.png
+    - assets/images/send_white.png
+    - assets/images/send_yellow_fill.png
+    - assets/images/setting.png
+    - assets/images/share_fill.png
+    - assets/images/small_down_arrow.png
+    - assets/images/sort.png
+    - assets/images/star.png
+    - assets/images/up_arrow_white_fill.png
+    - assets/images/video-camera.png
+    - assets/images/web_grey.png
+    - assets/images/website.png
+    - assets/images/white_dollor.png
+    - assets/images/White_X.png
+    - assets/images/X.png
+    - assets/images/yellow_pin.png
+    - assets/images/image_upload.png
+    - assets/images/eye.png
+    - assets/env.json
+    - assets/images/yellow_arrow.png
+    - assets/images/up_arrow.png
+    - assets/images/share.png
+    - assets/images/home.png
+    - assets/images/tick.png
+    - assets/images/applogo.png
+    - assets/images/image_placeholder.png
+    - assets/images/bookmark.png
+    - assets/images/save_post_fill.png
+    - assets/images/save_post_fill.png
+    - assets/images/pin.png
+    - assets/images/Verify_logo.png
+    - assets/images/trash.png
+    - assets/images/pin_transparent.png
+    - assets/images/plusBlack.png
+    - assets/images/chatCircle.png
+    - assets/images/searchCircle.png
+    - assets/images/logo_verified.png
+    - assets/images/editCircle.png
+    - assets/images/up_arrow_yellow.png
+    - assets/images/down_arrow_yellow.png
+    - assets/images/shape.png
+    - assets/images/clock_4.png
+    - assets/images/notification_bottom.png
+    - assets/images/message_down.png
+    - assets/images/funder_badge.png
+    - assets/images/broker_badge.png
+    - assets/images/company_round_icon.png
+    - assets/images/background_default.jpg
+    - assets/images/filter_icon2.png
+    - assets/images/bio_book.png
+    - assets/images/tutorial_news_feed.png
+    - assets/images/tutorial_forum.png
+    - assets/images/tutorial_network.png
+    - assets/images/tutorial_notification.png
+    - assets/images/tutorial_messenger.png
+    - assets/images/tutorial_news_feed_arrow.png
+    - assets/images/tutorial_forum_arrow.png
+    - assets/images/tutorial_network_arrow.png
+    - assets/images/tutorial_notification_arrow.png
+    - assets/images/tutorial_messenger_arrow.png
+    - assets/images/btn.png
+    - assets/images/img_2.png
+    - assets/images/img.png
+
+
+
+
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFPro.ttf
+    - family: SFProDisplayBlack
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Black.ttf
+    - family: SFProDisplayBlackItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-BlackItalic.ttf
+    - family: SFProDisplayBold
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Bold.ttf
+    - family: SFProDisplayBoldItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-BoldItalic.ttf
+    - family: SFProDisplayHeavy
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Heavy.ttf
+    - family: SFProDisplayHeavyItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-HeavyItalic.ttf
+    - family: SFProDisplayLight
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Light.ttf
+    - family: SFProDisplayLightItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-LightItalic.ttf
+    - family: SFProDisplayMedium
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Medium.ttf
+    - family: SFProDisplayMediumItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-MediumItalic.ttf
+    - family: SFProDisplayRegular
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Regular.ttf
+    - family: SFProDisplayRegularItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-RegularItalic.ttf
+    - family: SFProDisplaySemibold
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Semibold.ttf
+    - family: SFProDisplaySemiboldItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-SemiboldItalic.ttf
+    - family: SFProDisplayThin
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Thin.ttf
+    - family: SFProDisplayThinItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-ThinItalic.ttf
+    - family: SFProDisplayUltralight
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-Ultralight.ttf
+    - family: SFProDisplayUltralightItalic
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProDisplay-UltralightItalic.ttf
+    - family: SFProTextSemibold
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Semibold.ttf
+    - family: SFProTextMedium
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Medium.ttf
+    - family: SFProTextRegular
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Regular.ttf
+    - family: SFProTextBold
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Bold.ttf
+    - family: SFProTextLight
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Light.otf
+    - family: SFProTextUltraLight
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Ultralight.otf
+    - family: SFProTextThin
+      fonts:
+        - asset: assets/fonts/sfpro_fonts/SFProText-Thin.otf
+    - family: OpenSansBold
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Bold.ttf
+    - family: OpenSansBoldItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-BoldItalic.ttf
+    - family: OpenSansExtraBold
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-ExtraBold.ttf
+    - family: OpenSansExtraBoldItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-ExtraBoldItalic.ttf
+    - family: OpenSansItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Italic.ttf
+    - family: OpenSansLight
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Light.ttf
+    - family: OpenSansLightItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-LightItalic.ttf
+    - family: OpenSansMedium
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Medium.ttf
+    - family: OpenSansMediumItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-MediumItalic.ttf
+    - family: OpenSansRegular
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Regular.ttf
+    - family: OpenSansSemiBold
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-SemiBold.ttf
+    - family: OpenSansSemiBoldItalic
+      fonts:
+        - asset: assets/fonts/open_sans/OpenSans-SemiBoldItalic.ttf
+
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
